@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SennaFilter — Luxury Hospitality Photographer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav id="nav">
+    <a class="nav-logo" onclick="showPage('home')">SennaFilter</a>
+    <ul class="nav-links">
+      <li><a onclick="showPage('home')">Home</a></li>
+      <li><a onclick="showPage('hotels')">Hotels</a></li>
+      <li><a href="mailto:sennafilter@gmail.com">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ══════════════ HOME ══════════════ -->
+  <div id="page-home" class="page active">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-img-wrap">
+        <img src="assets/hero.jpg" alt="Hero" class="hero-img" onerror="this.style.display='none'" />
+        <div class="hero-placeholder">
+          <span>hero photo</span>
+        </div>
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-text">
+        <p class="hero-eyebrow">Luxury Hospitality Photographer</p>
+        <h1 class="hero-title">SennaFilter</h1>
+        <p class="hero-location">Orange County, California</p>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about">
+      <p class="section-label">About</p>
+      <p class="about-body">
+        Senna is a travel, hotel, and lifestyle photographer based in Orange County. 
+        She works with luxury travel and hospitality brands around the world — 
+        shooting on both film and digital — to create transportive images that 
+        inspire travelers to dream up their next trip.
+      </p>
+    </section>
+
+    <!-- Feature My Work -->
+    <section class="feature">
+      <div class="feature-img-wrap">
+        <img src="assets/feature.jpg" alt="Feature" class="feature-img" onerror="this.style.display='none'" />
+        <div class="feature-placeholder">
+          <span>feature photo</span>
+        </div>
+      </div>
+      <div class="feature-overlay"></div>
+      <div class="feature-content">
+        <h2 class="feature-title">Feature My Work</h2>
+        <a href="mailto:sennafilter@gmail.com" class="feature-btn">Get in Touch</a>
+      </div>
+    </section>
+
+    <!-- Selected Hotels -->
+    <section class="preview-section">
+      <div class="preview-header">
+        <span class="section-label">Selected Hotels</span>
+        <a class="view-all" onclick="showPage('hotels')">View all &rarr;</a>
+      </div>
+      <div class="preview-grid" id="home-grid"></div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact">
+      <div>
+        <p class="section-label">Let's Connect</p>
+        <a href="mailto:sennafilter@gmail.com" class="contact-email">sennafilter@gmail.com</a>
+      </div>
+      <a href="mailto:sennafilter@gmail.com" class="contact-btn">Contact Me</a>
+    </section>
+
+    <footer>
+      <p>&copy; SennaFilter. All images reserved.</p>
+      <p>Orange County, California</p>
+    </footer>
+  </div>
+
+  <!-- ══════════════ HOTELS ══════════════ -->
+  <div id="page-hotels" class="page">
+    <div class="page-header">
+      <h2 class="section-label">Hotels</h2>
+    </div>
+    <div class="hotels-grid" id="hotels-grid"></div>
+  </div>
+
+  <!-- ══════════════ HOTEL DETAIL ══════════════ -->
+  <div id="page-hotel" class="page">
+    <div id="hotel-detail"></div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
